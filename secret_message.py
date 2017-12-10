@@ -1,8 +1,6 @@
 """
-Task 1.  Display the input message at positions that are present in the Fibonacci 
-sequence (a sequence formed by the the
-Fibonacci number sorted in ascending order). Please ignore whitespace 
-characters and use the extended Fibonacci.
+Task 1 -  
+Display the input message at positions that are present in the Fibonacci sequence.
 Return the obtained characters capitalized and connected by the '*-*' character.
 """
 
@@ -14,24 +12,24 @@ def main():
     # getting postions of characters in string which is to be displayed
     positions = list(fibonacci(message_length))
     
-    # processing string 
-    secret_message = process_string(message, positions)
+    # processing message 
+    secret_message = process_message(message, positions)
     
-    #displaying processed output string
+    #displaying processed output message
     print "Secret Message is: {}".format(secret_message)
 
-def process_string(message, pos):
+def process_message(message, pos):
     """
     :param message:Input message
     :param pos: Positions of character to be taken
-    :return: Processed string
+    :return: Processed message
     """
     return '*-*'.join([message[index] for index in pos]).upper()
     
 
 def get_formatted_input_message():
     """
-    :return: Input string from user
+    :return: Input message from user
     """
     message_length = 0
     message = ''
